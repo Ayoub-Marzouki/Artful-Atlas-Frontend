@@ -1,0 +1,76 @@
+/* adding some specifications to the body */
+body {
+    background-image:url(/images/background-images/2-services.jpg);
+    font-size:20px;
+    text-align:center;
+}
+/* changing text color of the nav bar */
+.flexbox {
+    color:burlywood;
+}
+.flexbox:nth-child(2) {
+    background-color:rgba(0,0,0,0.1);
+}
+h1, h2, p {
+    font-weight:900;
+    color:rgb(175, 136, 84);
+}
+h1, h2 {
+    margin:2%;
+}
+a {
+    text-decoration:none;
+}
+
+@keyframes FadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.slider {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+.slider-image {
+    height:500px;
+    width:500px;
+    animation:FadeIn 3s;
+}
+/* Changing footer paragraphs */
+.footer2 p {
+    font-weight:100;
+    color:white;
+}
+
+/* Making the page mobile friendly */
+@media only screen and (max-width:600px) {
+    body {
+        font-size:18px;
+    }
+    h1 , h2 {
+        margin:10% 0;
+        font-size:1.7em;
+    }
+    .slider {
+        display:block;
+    }
+    .slider-image {
+        margin:2%;
+        width:80vw;
+        height:50vh;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:1200px) {
+    .slider {
+        display:block;
+    }
+    .slider-image {
+        margin:2%;
+        width:80vw;
+        height:75vh;
+    }
+}

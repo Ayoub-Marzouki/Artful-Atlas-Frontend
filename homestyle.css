@@ -1,0 +1,207 @@
+/*Taking care of body background*/
+
+body {
+   /* background-color:rgb(253, 203, 183); */
+   background-image:url(/images/background-images/2.jpg);
+   
+   margin:auto;
+   font-family:cursive;
+   color:darkcyan;
+}
+/* Setting up the first image to show up once user enters site */
+#first, #first-h1 {
+    animation:FadeIn 5s forwards;
+}
+#first-h1 {
+    position:absolute;
+    width:30%;
+    padding:4%;
+    z-index:100;
+}
+#second-h1 {
+    position:absolute;
+    left:75%;
+    top:50%;
+    padding:4%;
+    opacity:0;
+    animation:FadeIn 3s ease-in 2500ms forwards;
+}
+#first {
+    width:100vw;
+    height:120vh;
+    float:right;
+}
+.clear {
+    clear:both;
+}
+#gradient {
+    background-image: linear-gradient(to right, rgb(255, 0, 0), darkcyan); /* Define the gradient */
+    background-clip: text; /* Clip the background to the text */
+    -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+    color: transparent; /* Set the text color to transparent */
+}
+
+/* Setting size of each part (home, services etc) */
+.flexbox {
+    color:lightcyan;
+    background-color:rgba(0,0,0,0.2);
+}
+/* Setting this page's name's background */
+.flexbox:first-child {
+    background-color:rgba(0,0,0,0.7); 
+}
+/* Removing right border of the last element of home services etc */
+.flexbox:last-child {
+    border-right:none;
+}
+.flexbox:hover {
+    text-transform:capitalize;
+    font-weight:900;
+    background-color:rgba(0,0,0,0.2);
+    transition:300ms;
+}
+/*Adjusting the intro of the page */
+#intro {
+    margin:3%;
+}
+#intro span {
+    color:crimson;
+}
+
+h1 {
+    text-align:center;
+    font-size:50px;
+    font-style:italic;
+}
+/* Adding a fading effect to the slider images */
+@keyframes FadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+}
+}
+
+/* Positionning the sliders to the center */
+/* .slider1-image , .slider2-image {
+    display:block;
+    margin:auto;
+    border:1px solid rgba(164, 157, 157, 0.1);
+    border-radius:1%;
+    animation:FadeIn 2.5s;
+    width:800px;
+    height:620px;
+} */
+
+
+.slider {
+    position: relative;
+    width: 600px;
+    overflow: hidden;
+    margin:auto;
+}
+
+.slider-image {
+    width:600px;
+    object-fit: cover; /* This ensures images maintain aspect ratio and fit the container */
+}
+
+.slider-images {
+    display:flex;
+    width:600px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-arrows {
+    position: absolute;
+    top: 50%;
+    left:0%;
+    right:0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-arrow {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+
+/* Adjusting position of slider images, left and right arrows */ 
+.flexboxcontainer2 {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#hr1 {
+    margin:2%;
+}
+.back , .next {
+    padding:200px 25px 200px 25px;
+    transition:700ms;
+}
+.back:hover , .next:hover {
+    transition:700ms;
+    cursor:pointer;
+    background-color:rgba(0, 0, 0, 0.1);
+}
+/* Styling the first footer of the page */
+.footer1 {
+    font-size:25px;
+    margin:3%;
+    text-align:center;
+    
+}
+.footer1 a {
+    text-decoration:none;
+    font-weight:900;
+}
+.footer1 a:visited {
+    color:darkslategray;
+}
+/* Styling hr lines  */
+hr {
+    color:rgba(0,0,0,0.3);
+}
+
+/* Making the page mobile friendly */
+
+@media only screen and (max-width:600px) {
+    h1 {
+        font-size:2em;
+    }
+    .slider1-image , .slider2-image {
+        width:75vw;
+        height:50vh;
+    }
+    .back , .next {
+        padding:5px;
+        width:10vw;
+        height:5vh;
+    }
+    #first-h1 , #second-h1 {
+        font-size:20px;
+    }
+    #first {
+        width:100vw;
+        height:75vh;
+    }
+    
+}
+@media only screen and (min-width:600px) and (max-width:1200px) {
+    .slider1-image {
+        width:80vw;
+        height:60vh;
+    }
+    #first-h1 , #second-h1 {
+        font-size:25px;
+    }
+    .back , .next {
+        padding:75px 14px;
+        transition:700ms;
+    }
+}

@@ -1,0 +1,70 @@
+body {
+    background-image:url(/images/background-images/contact.jpg);
+    background-attachment:scroll;
+    background-size: cover;
+    background-position: right center; 
+    font-size:20px;
+}
+.flexbox {
+    color:rgb(0, 0, 139);
+}
+.flexbox:nth-child(3) {
+    background-color:rgba(0,0,0,0.2);
+}
+a {
+    text-decoration:none;
+}
+h1, p {
+    font-weight:900;
+    text-align:center;
+    margin:2%;
+    color:rgba(0, 0, 139, 0.562);
+}
+/* Modifying the border of google maps */
+iframe {
+    border-radius:1%;
+    width:600px;
+    height:450px;
+    
+}
+.icons {
+    display:flex;
+    justify-content:center;
+    gap:3%;
+}
+/* Transition isn't working for some reason. Double check when you're up*/
+.icons a img {
+    width:100%;
+    transition:300ms;
+}
+.icons a img:hover {
+    width:110%;
+    transition:300ms;
+}
+.footer2 p {
+    margin:0;
+    padding:0;
+    color:white;
+    font-weight:100;
+}
+
+/* Making the page mobile friendly */
+
+@media only screen and (max-width:600px) {
+    iframe {
+        width:80vw;
+        height:50vh;
+    }
+}
+@media only screen and (min-width:600px) {
+    iframe {
+        width:80vw;
+        height:50vh;
+    }
+}
+@media only screen and (min-width:1200px) {
+    iframe {
+        width:40vw;
+        height:50vh;
+    }
+}

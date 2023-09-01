@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="AMMRG">
+        <meta name="description" content="Home page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="sharedstyle.css">
+        <link rel="stylesheet" href="homestyle.css">
+        <link rel="icon" href="images-testing/2.jpg" type="image/x-icon">
+        <script src="homejs.js" defer></script>
+        <title>Home page</title>
+    </head>
+    
+    <body>
+        <div class="intro0">
+            <h1 id="first-h1">Stare at her enough...</h1>
+            <img id="first" src="images/images-testing/1most-beautiful.png" alt="portrait1" title="image of a young lady">
+            <h1 id="second-h1">And it starts to look <span id="gradient">Alive</span></h1>
+        </div>
+        <div class="clear"></div>
+
+        <header class="sticky">
+            <nav class="flexboxcontainer">
+                <a class="flexbox" href="index.html">Home</a>
+                <a class="flexbox" href="services.html">Services</a>
+                <a class="flexbox" href="contact.html">Contact</a>
+                <a class="flexbox" href="about.html">About</a>
+                <a class="flexbox" href="store2.html">Store</a>
+            </nav>
+        </header>
+        <header id="intro">
+            <h1>A Warm Welcome from the Heart of the <span>Atlas!</span></h1>
+        </header>
+        <!-- We've positioned this header outside main so that it takes full width of body, could just go for div or something else instead -->
+        <main>
+            
+            <div class="clear"></div>
+            
+            <h1>Portraits</h1>
+            <header class="slider">
+                <div class="slider-images">
+                    <img class="slider-image" src="/images/images-testing/1most-beautiful.png" alt="Image 1">
+                    <img class="slider-image" src="/images/images-testing/2.jpg" alt="Image 2">
+                    <img class="slider-image" src="/images/images-testing/3.jpg" alt="Image 3">
+                    <img class="slider-image" src="/images/images-testing/4.jpg" alt="Image 4">
+                    <img class="slider-image" src="/images/images-testing/5.jpg" alt="Image 5">
+                    <img class="slider-image" src="/images/images-testing/6.webp" alt="Image 6" width="600">
+                </div>
+                <div class="slider-arrows">
+                    <img class="slider-arrow left-arrow" src="/images/arrows/left.png" alt="Previous" onclick="previousSlide()">
+                    <img class="slider-arrow right-arrow" src="/images/arrows/right.png" alt="Next" onclick="nextSlide()">
+                </div>
+            </header>
+
+            <hr id="hr1">
+            <h1>Absract</h1>
+            <header id="slider2" class="flexboxcontainer2 slider">
+                <img class="back flexbox2" src="images/arrows/left.png" alt="Back" title="Back">
+                <img class="slider2-image" src="images/images-testing/second-type/1.jpeg">                    
+                <img class="slider2-image" src="images/images-testing/second-type/2.jpeg">
+                <img class="slider2-image" src="images/images-testing/second-type/3.jpeg">
+                <img class="slider2-image" src="images/images-testing/second-type/4.jpeg">
+                <img class="slider2-image" src="images/images-testing/second-type/5.jpeg">
+                <img class="slider2-image" src="images/images-testing/second-type/6.jpeg">
+                <img class="slider2-image" src="images/images-testing/second-type/7.jpeg">
+                <img class="slider2-image" src="images/images-testing/second-type/8.jpeg">
+                <img class="slider2-image" src="images/images-testing/second-type/9.jpeg">
+                <img class="slider2-image" src="images/images-testing/second-type/10.jpeg">
+                <img class="slider2-image" src="images/images-testing/second-type/11.jpeg">
+                <img class="slider2-image" src="images/images-testing/second-type/12.jpeg">
+                <img class="next flexbox2" src="images/arrows/right.png" alt="Next" title="Next">
+                <div class="slider-arrows">
+                    <img class="slider-arrow left-arrow" src="/images/arrows/left.png" alt="Previous" onclick="previousSlide()">
+                    <img class="slider-arrow right-arrow" src="/images/arrows/right.png" alt="Next" onclick="nextSlide()">
+                </div>
+            </header>
+            <br><br>
+            <hr>
+
+           <footer class="footer1">
+            <h2>We got your attention?</h2>
+            <p>You can check our other sections; starting with <a href="services.html">services</a> tab to check what we're currently offering, or with <a href="about.html">about us</a> tab to get a better idea about who we are.<br> You can also check <a href="store2.html">shop</a> tab if you want to buy a painting, or <a href="contact.html">contact</a> tab if you're interested in business!</p>
+           </footer>
+           
+        </main>
+        <footer class="footer2">
+            <p>&copy;Ayoub Marzouki <br>2022-Present. <br> Background by Freepik <br><br></p>
+            <img class="logo" src="images/logos-images/logo.png" alt="Artful Atlas Logo">
+        </footer>
+    </body>
+
+</html>

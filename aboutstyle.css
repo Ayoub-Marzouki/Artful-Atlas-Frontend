@@ -1,0 +1,80 @@
+body {
+    background-image:url(/images/background-images/test.jpg);
+    background-size:auto;
+    background-attachment:scroll; 
+    background-size:cover;
+    background-position:center center;
+    /*
+     This and size:cover can be used to adjust the image to fit the user's screen 
+    */
+    line-height:200%;
+    color:azure;
+    font-size:20px;
+    font-family:monospace;
+}
+main {
+    width:100%;
+}
+.flexbox:nth-child(4) {
+    background-color:rgba(0,0,0,0.5);
+}
+.flexbox {
+    color:antiquewhite;
+}
+h1 {
+    text-align:center;
+    margin:3%;
+    line-height:150%;
+}
+main .intro {
+    width:60%;
+    height:20%;
+    margin-top:5%;
+    padding:5% 5% 5% 1%;
+    background-color:rgba(0,0,0,0.4);
+}
+#red {
+    color:crimson;
+}
+#green {
+    color:rgb(166, 255, 166);
+}
+#flag {
+    width:50%;
+    float:right;
+    margin:1%;
+}
+.clear {
+    clear:both;
+}
+
+/* Making the page mobile friendly */
+
+@media only screen and (max-width:600px) {
+    body {
+        font-size:16px;
+        background-attachment:fixed;
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center center;
+    }
+    main .intro {
+        display:block;
+        margin:auto;
+        text-align:center;
+        width:80%;
+        
+    }
+    #flag {
+        float:none;
+        width:75%;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:1200px) {
+    body {
+        background-attachment:fixed;
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center center;
+    }
+}

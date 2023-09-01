@@ -1,0 +1,89 @@
+/* !!! NOTE : Colors, background images and styling of elements are removed from here.
+   This concerns the body itself, the logo and the navigation bar at the top of the page.
+*/
+/* Resetting margin and padding */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+   /*background-color:rgb(253, 203, 183); */
+   background-color:seashell;
+   /* background-image:linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0,0.9)); */
+   background-attachment:fixed;
+   background-size:cover;
+   font-family:cursive;
+}
+
+/* Adjusting the content to take 80% of width */
+main {
+    margin:auto;
+    width:80%;
+}
+
+/* Fixing nav bar */
+.sticky {
+    position:sticky;
+    top:0;
+    width:100%;
+}
+/* Messing with the logo */
+#symbol {
+    width:100%;
+    text-align:center;
+}
+.logo {
+    width:230px;
+    height:150px;
+}
+/* Adjusting position of home, services etc */
+.flexboxcontainer  {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    font-size:23px;
+}
+/* Setting size of each part (home, services etc) */
+.flexbox {
+    flex:1; /*This will force each element to take equal space */
+    text-align:center;
+    text-decoration:none;
+    list-style:none;
+    padding:10px;
+    border-right:2px solid grey;
+    background-color:rgba(0,0,0,0.4);
+    transition:300ms;
+}
+/* Removing right border of the last element of home services etc */
+.flexbox:last-child {
+    border-right:none;
+}
+.flexbox:hover {
+    text-transform:capitalize;
+    font-weight:900;
+    background-color:rgba(0,0,0,0.15);
+    transition:300ms;
+}
+/* Styling last part of the page*/
+.footer2 {
+    font-weight:100;
+    font-size:medium;
+    color:white;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,1));
+    text-align:center;
+}
+@media only screen and (max-width:600px) {
+    .flexboxcontainer {
+        font-size:15px;
+        flex-wrap:wrap;
+    }
+    .flexbox {
+        padding:6px;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:1200px) {
+    .flexboxcontainer {
+        font-size:18px;
+    }
+}
