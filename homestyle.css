@@ -83,33 +83,24 @@ h1 {
 }
 }
 
+
 /* Positionning the sliders to the center */
-/* .slider1-image , .slider2-image {
-    display:block;
-    margin:auto;
-    border:1px solid rgba(164, 157, 157, 0.1);
-    border-radius:1%;
-    animation:FadeIn 2.5s;
-    width:800px;
-    height:620px;
-} */
-
-
 .slider {
     position: relative;
-    width: 600px;
+    width:500px;
     overflow: hidden;
     margin:auto;
+    border-radius:1%;
 }
 
-.slider-image {
-    width:600px;
-    object-fit: cover; /* This ensures images maintain aspect ratio and fit the container */
+.slider-image, .slider2-image {
+    width:500px;
+    object-fit:cover; /* This ensures images maintain aspect ratio and fit the container */
 }
 
 .slider-images {
     display:flex;
-    width:600px;
+    width:500px;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -129,14 +120,6 @@ h1 {
     cursor: pointer;
 }
 
-
-
-/* Adjusting position of slider images, left and right arrows */ 
-.flexboxcontainer2 {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
 #hr1 {
     margin:2%;
 }
