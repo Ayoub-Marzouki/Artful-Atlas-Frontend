@@ -83,8 +83,8 @@ function createSlider(sliderId, intervalTime) {
 }
 
 // Call the function to create the sliders
-createSlider('slider', 2000); // First slider
-createSlider('slider2', 2000); // Second slider
+createSlider('slider', 2500); // First slider
+createSlider('slider2', 2500); // Second slider
 
 
 // Create function to add the animation for the logo
@@ -122,8 +122,8 @@ const logoObserver = new IntersectionObserver(startLogoAnimationWhenVisible, obs
 const heartObserver = new IntersectionObserver(startHeartAnimationWhenVisible,observerOptions2);
 
 // Look for logo and call the function upon it
-const logo=document.getElementsByClassName("logo");
-logoObserver.observe(logo[0]);
+const logo=document.getElementById("logo");
+logoObserver.observe(logo);
 
 // Look for the heart span and call the function upon it
 const heartGradient=document.getElementById("heartgradient");

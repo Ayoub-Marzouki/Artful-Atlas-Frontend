@@ -5,7 +5,8 @@
         <meta name="Author" content="AMMRG">
         <meta name="description" content="Home page">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="sharedstyle.css">
+        <link rel="stylesheet" href="sharedstyle.css"> 
+        <!-- To delete shared style later -->
         <link rel="stylesheet" href="homestyle.css">
         <link rel="icon" href="images-testing/2.jpg" type="image/x-icon">
         <script src="homejs.js" defer></script>
@@ -23,61 +24,78 @@
 
         <header id="intro">
             <h1>A <span id="warmgradient">Warm</span> Welcome from the <span id="heartgradient">Heart</span> of the <br>
-                <img class="logo" src="images/logos-images/logo.png" alt="Artful Atlas Logo">
+                <img id="logo" src="images/logos-images/logo.png" alt="Artful Atlas Logo">
             </h1>
         </header>
         <!-- We've positioned this header outside main so that it takes full width of body, could just go for div or something else instead -->
-        <main>
-            
-            <div class="clear"></div>
-            
-            <h1>Portraits</h1>
-            <header id="slider" class="slider">
-                <div class="slider-images">
-                    <img class="slider-image" src="/images/images-testing/1most-beautiful.png" alt="Image 1">
-                    <img class="slider-image" src="/images/images-testing/2.jpg" alt="Image 2">
-                    <img class="slider-image" src="/images/images-testing/3.jpg" alt="Image 3">
-                    <img class="slider-image" src="/images/images-testing/4.jpg" alt="Image 4">
-                    <img class="slider-image" src="/images/images-testing/5.jpg" alt="Image 5">
-                    <img class="slider-image" src="/images/images-testing/6.webp" alt="Image 6" width="600">
-                </div>
-                <div class="slider-arrows">
-                    <img class="slider-arrow left-arrow" src="/images/arrows/left.png" alt="Previous">
-                    <img class="slider-arrow right-arrow" src="/images/arrows/right.png" alt="Next">
-                </div>
-            </header>
+       
+       
+        <header id="home-main">
+                <h1>Portraits</h1>
+                <header id="slider" class="slider">
+                    <div class="slider-images">
+                        <img class="slider-image" src="/images/images-testing/1most-beautiful.png" alt="Image 1">
+                        <img class="slider-image" src="/images/images-testing/2.jpg" alt="Image 2">
+                        <img class="slider-image" src="/images/images-testing/3.jpg" alt="Image 3">
+                        <img class="slider-image" src="/images/images-testing/4.jpg" alt="Image 4">
+                        <img class="slider-image" src="/images/images-testing/5.jpg" alt="Image 5">
+                        <img class="slider-image" src="/images/images-testing/6.webp" alt="Image 6" width="600">
+                    </div>
+                    <div class="slider-arrows">
+                        <img class="slider-arrow left-arrow" src="/images/arrows/left.png" alt="Previous">
+                        <img class="slider-arrow right-arrow" src="/images/arrows/right.png" alt="Next">
+                    </div>
+                </header>
 
-            <hr id="hr1">
-            <h1>Absract</h1>
-            <header id="slider2" class="slider">
-                <div class="slider-images">
-                    <img class="slider2-image" src="images/images-testing/second-type/1.jpeg">                    
-                    <img class="slider2-image" src="images/images-testing/second-type/2.jpeg">
-                    <img class="slider2-image" src="images/images-testing/second-type/3.jpeg">
-                    <img class="slider2-image" src="images/images-testing/second-type/4.jpeg">
-                    <img class="slider2-image" src="images/images-testing/second-type/5.jpeg">
-                    <img class="slider2-image" src="images/images-testing/second-type/6.jpeg">
-                    <img class="slider2-image" src="images/images-testing/second-type/7.jpeg">
-                    <img class="slider2-image" src="images/images-testing/second-type/8.jpeg">
-                    <img class="slider2-image" src="images/images-testing/second-type/9.jpeg">
-                    <img class="slider2-image" src="images/images-testing/second-type/10.jpeg">
-                    <img class="slider2-image" src="images/images-testing/second-type/11.jpeg">
-                    <img class="slider2-image" src="images/images-testing/second-type/12.jpeg">
-                </div>
-                <div class="slider-arrows">
-                    <img class="slider-arrow left-arrow" src="/images/arrows/left.png" alt="Previous">
-                    <img class="slider-arrow right-arrow" src="/images/arrows/right.png" alt="Next">
-                </div>
-            </header>
-            <br><br>
-            <hr>
+                <hr id="hr1">
+                <h1>Absract</h1>
+                <header id="slider2" class="slider">
+                    <div class="slider-images">
+                        <img class="slider2-image" src="images/images-testing/second-type/1.jpeg">                    
+                        <img class="slider2-image" src="images/images-testing/second-type/2.jpeg">
+                        <img class="slider2-image" src="images/images-testing/second-type/3.jpeg">
+                        <img class="slider2-image" src="images/images-testing/second-type/4.jpeg">
+                        <img class="slider2-image" src="images/images-testing/second-type/5.jpeg">
+                        <img class="slider2-image" src="images/images-testing/second-type/6.jpeg">
+                        <img class="slider2-image" src="images/images-testing/second-type/7.jpeg">
+                        <img class="slider2-image" src="images/images-testing/second-type/8.jpeg">
+                        <img class="slider2-image" src="images/images-testing/second-type/9.jpeg">
+                        <img class="slider2-image" src="images/images-testing/second-type/10.jpeg">
+                        <img class="slider2-image" src="images/images-testing/second-type/11.jpeg">
+                        <img class="slider2-image" src="images/images-testing/second-type/12.jpeg">
+                    </div>
+                    <div class="slider-arrows">
+                        <img class="slider-arrow left-arrow" src="/images/arrows/left.png" alt="Previous">
+                        <img class="slider-arrow right-arrow" src="/images/arrows/right.png" alt="Next">
+                    </div>
+                </header>
 
-           <footer class="footer1">
-            <h2>We got your attention?</h2>
-            <p>You can check our other sections; starting with <a href="services.html">services</a> tab to check what we're currently offering, or with <a href="about.html">about us</a> tab to get a better idea about who we are.<br> You can also check <a href="store2.html">shop</a> tab if you want to buy a painting, or <a href="contact.html">contact</a> tab if you're interested in business!</p>
-           </footer>
-           
-        </main>
+                <br><br>
+                <hr>
+
+                <footer class="footer1">
+                    <h2>We got your attention?</h2>
+                    <p>You can check our other sections; starting with <a href="services.html">services</a> tab to check what we're currently offering, or with <a href="about.html">about us</a> tab to get a better idea about who we are.<br> You can also check <a href="store2.html">shop</a> tab if you want to buy a painting, or <a href="contact.html">contact</a> tab if you're interested in business!</p>
+                </footer>
+        </header>
+        
+        <header id="services-main">
+                <header class="eighty">
+                <h1 class="services-h1">Want to see yourself in an artistic manner? <br> Perhaps your beloved ones too?</h1>
+                <header class="slider3">
+                    <img class="slider3-image" src="images/services/1.jpg" alt="Services">
+                    <img class="slider3-image" src="images/services/2.jpg" alt="Services">
+                    <img class="slider3-image" src="images/services/3.jpg" alt="Services">
+                    <img class="slider3-image" src="images/services/4.webp" alt="Services">
+                    <script src="servicesjs.js"></script>
+                </header>
+                <h2 class="services-h2">We are at your services!</h2>
+                <p class="services-p">All you have to do is send a clear picture of yourself to our email :ayoubma321@gmail.com, provided with your location if you want us to deliver the drawing for you. Or you could visit us <a href="contact.html">here</a> and take it yourself.</p>
+                <h1 class="services-h1">Fees</h1>
+                <p class="services-p">Portrait with no delivery : <br> 150dh.<br>Portrait with delivery : <br> 175dh.</p>
+
+            </header>
+        </header>
         <footer class="footer2">
             <p>&copy;Ayoub Marzouki <br>2022-Present. <br> Background by Freepik <br><br></p>
             <img class="logo" src="images/logos-images/logo.png" alt="Artful Atlas Logo">
