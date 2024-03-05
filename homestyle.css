@@ -8,8 +8,8 @@
 body {
    /* background-color:rgb(253, 203, 183); */
    margin:auto;
-   font-family:cursive;
-   color:darkcyan;
+   font-family:'Times New Roman', Times, serif;
+   color:rgba(0,0,0,0.7);
    text-align:center;
 }
 
@@ -44,59 +44,133 @@ body {
     float:right; 
     /* Not sure what this float is for, so I'll keep it for now */
 }
+
+
+/* Scroll down to next section button */
+#down {
+    position:absolute;
+    top:75%;
+    left:87%;
+    opacity:0;
+    animation:FadeIn 1s ease-in 7000ms forwards;
+}
+#down:hover{
+    cursor:pointer;
+} 
+
 .clear {
     clear:both;
 }
-/* Making the "Alive" span element alive :P */
-#gradient {
-    background-image: linear-gradient(to right, rgb(255, 0, 0), darkcyan); /* Define the gradient */
-    background-clip: text; /* Clip the background to the text */
-    -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
-    color: transparent; /* Set the text color to transparent */
+
+/* Setting up the first slider that showcases Morocco */
+.slider0-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
-
-/*Adjusting the intro of the page, the one after the first image that shows up */
-#intro {
-    background-image: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,1));
-    padding-top:1%;
-    color:rgba(0, 255, 255, 0.747);
-}
-/* Adjusting the size of h1 of the intro */
-#intro h1 {
-    font-size:45px;
+.slider0-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-/* Adding some margin to the logo */
-#logo {
-    width:230px;
-    height:150px;
-    opacity:0;
-    margin:2%;
+.slider0-text {
+    background-color:rgba(0,0,0,0.5);
+    color:whitesmoke;
+    line-height:4vh;
+    font-size:22px;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    padding:5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:99;
 }
 
-/* Adding the logo animation to manipulate it in javascript file */
-.logo-animation {
-    animation:FadeIn 3s ease-in forwards;
+#welcome {
+    display:block;
+    color:white;
+    font-size:3vw;
 }
 
-
-/* Adding the gradient effect to "Warm" span element */
-#warmgradient {
-    background-image:linear-gradient(to top, white,red);
-    background-clip:text;
-    -webkit-background-clip: text;
-    color:transparent;
+.slider0-image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-/* Changing the color of "Heart" span element */
-#heartgradient {
-    color:crimson;
+.slider0-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
-/* Adding the heart animation to manipulate it in javascript file */
-.heartgradient-animation {
-    animation:alive 1250ms ease-in-out 3 forwards;
+.slider0-image:first-child {
+    opacity: 1;
+}
+
+/* Style for the slider of paintings */
+
+#paintings-p {
+    position:absolute;
+    color:whitesmoke;
+    line-height:5vh;
+    font-size:30px;
+    padding:3%;
+    background-color:rgba(0,0,0,0.5);
+    z-index:999;
+    font-style:normal;
+}
+.slider-container {
+    background-color:rgb(60,22,46);
+    position: relative;
+    height: 100vh;
+}
+.slider-object {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    /* Setting up the slider */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s; /* Adjust the duration as needed */
+  
+}
+.slider-object.active {
+    opacity: 1;
+    z-index: 1;
+}
+/* Adjusting the dimensions of the image */
+.paintings {
+    display:inline-block;
+    width:75vw;
+    height:100vh;
+}
+/* Adjusting the writings next to the image */
+.slider-object p {
+    color:white;
+    text-align:center;
+}
+/* Adjusting the size of the image's title */
+.title {
+    font-size:4vw;
+}
+/* Adjusting the size of the image's painter */
+.slider-object p .author {
+    font-size:2vw;
 }
 
 /* Adding an "alive" effect to the spans */
@@ -188,46 +262,6 @@ hr {
     color:rgba(0,0,0,0.3);
 }
 
-/* Specifying the background image for what once was services page */
-#services-main {
-    background-image:url(/images/background-images/2-services.jpg);
-}
-/* Forcing its width to 80% */
-.eighty {
-    margin:auto;
-    width:80%;
-}
-
-/* Adjusting the size of services slider */
-.slider3 {
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-}
-.slider3-image {
-    height:500px;
-    width:500px;
-    animation:FadeIn 3s;
-}
-/* Adjusting the headings and paragraphs of what once was services page */
-.services-h1, .services-h2, .services-p {
-    font-weight:900;
-    color:rgb(175, 136, 84);
-}
-.services-h1, .services-h2 {
-    font-size:45px;
-    margin:2%;
-}
-.services-h1:nth-of-type(1) {
-    margin-top:0%;
-}
-.services-p {
-    font-size:23px;
-    padding-bottom:2%;
-}
-a {
-    text-decoration:none;
-}
 
 /* Making the page mobile friendly */
 
@@ -252,7 +286,7 @@ a {
         width:150vw;
         height:100vh;
     }
-    @keyframes alive {
+    /* @keyframes alive {
         0% {
             font-size:23px;
         }
@@ -262,7 +296,7 @@ a {
         100% {
             font-size:23px;
         }
-    }
+    } */
 }
 @media only screen and (min-width:501px) and (max-width:600px) {
     #intro h1, h1 {
@@ -311,22 +345,14 @@ a {
     }
 } 
 
-/* Mobile friendly specifically for what once was services page */
-@media only screen and (max-width:600px) {
+@media only screen and (min-width:600px) and (max-width:1200px) {
     .services-h1 , .services-h2 {
         margin:10% 0;
         font-size:2em;
     }
-    .slider3 {
-        display:block;
+    .services-p {
+        font-size:1.3em;
     }
-    .slider3-image {
-        margin:2%;
-        width:80vw;
-        height:50vh;
-    }
-}
-@media only screen and (min-width:600px) and (max-width:1200px) {
     .slider3 {
         display:block;
     }

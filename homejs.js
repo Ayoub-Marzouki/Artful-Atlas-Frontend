@@ -1,3 +1,19 @@
+// Scroll down to the first slider
+const scrollToSecondButton = document.getElementById('down');
+    const moroccanSlider = document.getElementById('moroccan-slider');
+
+    scrollToSecondButton.addEventListener('click', function() {
+        // Calculate the distance to scroll
+        const offset = moroccanSlider.offsetTop;
+
+        // Scroll smoothly to the next header
+        window.scrollTo({
+            top: offset,
+            behavior: 'smooth'
+        });
+    });
+
+
 // Function to handle slider functionality
 function createSlider(sliderId, intervalTime) {
     const slider = document.getElementById(sliderId);
@@ -87,44 +103,61 @@ createSlider('slider', 2500); // First slider
 createSlider('slider2', 2500); // Second slider
 
 
-// Create function to add the animation for the logo
-function startLogoAnimationWhenVisible(entries,observer) {
-    entries.forEach(entry=> {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('logo-animation');
 
-            observer.unobserve(entry.target);
-        }
-    })
+
+
+const slider0Images = document.querySelectorAll('.slider0-image');
+let currentIndex0 = 0;
+let intervalId0 = null;
+
+function changeImage() {
+    slider0Images[currentIndex0].style.opacity = 0;
+    currentIndex0 = (currentIndex0 + 1) % slider0Images.length;
+    slider0Images[currentIndex0].style.opacity = 1;
 }
 
-// Create function to add the animation for the Heart span element
-function startHeartAnimationWhenVisible(entries,observer) {
-    if (entries[0].isIntersecting) {
-        entries[0].target.classList.add('heartgradient-animation');
-        observer.unobserve(entries[0].target);
+function startSlider0() {
+    if (!intervalId0) {
+        intervalId0 = setInterval(changeImage, 3000);
     }
 }
-// Define the visibility options that both functions will use
-const observerOptions1 = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 1,
-};
-const observerOptions2 = {
-    root:null,
-    rootMargin:"-220px",
-    threshold:1,
+
+function stopSlider0() {
+    clearInterval(intervalId0);
+    intervalId0 = null;
 }
 
-// Create a single Intersection Observer object for both functions
-const logoObserver = new IntersectionObserver(startLogoAnimationWhenVisible, observerOptions1);
-const heartObserver = new IntersectionObserver(startHeartAnimationWhenVisible,observerOptions2);
+window.addEventListener('scroll', () => {
+    const slider0Container = document.getElementById('moroccan-slider');
+    const slider0Rect = slider0Container.getBoundingClientRect();
 
-// Look for logo and call the function upon it
-const logo=document.getElementById("logo");
-logoObserver.observe(logo);
+    if (slider0Rect.top <= window.innerHeight && slider0Rect.bottom >= 0) {
+        startSlider0();
+    } else {
+        stopSlider0();
+    }
+});
 
-// Look for the heart span and call the function upon it
-const heartGradient=document.getElementById("heartgradient");
-heartObserver.observe(heartGradient);
+
+
+// Creating the slider of the featured paintings
+
+const sliderContainer = document.querySelector('.slider-container');
+const sliderObjects = sliderContainer.querySelectorAll('.slider-object');
+
+let currentIndex = 0;
+
+const fadeSlide = (nextIndex) => {
+  sliderObjects[currentIndex].classList.remove('active');
+  sliderObjects[nextIndex].classList.add('active');
+  currentIndex = nextIndex;
+};
+
+sliderObjects.forEach((slide, index) => {
+  slide.style.transitionDelay = `${(index + 1) * 0.1}s`; // Adjust the delay as needed
+});
+
+setInterval(() => {
+  const nextIndex = (currentIndex + 1) % sliderObjects.length;
+  fadeSlide(nextIndex);
+}, 4000); // interval time to adjust the slide duration

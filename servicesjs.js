@@ -1,4 +1,4 @@
-var slider_holder=document.getElementsByClassName("slider3-image");
+var slider_holder=document.getElementsByClassName("slider-image");
 var counter=0;
 for (let i=2;i<=slider_holder.length-1;i++) {
     slider_holder[i].style.display="none";
