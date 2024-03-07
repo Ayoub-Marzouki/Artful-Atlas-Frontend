@@ -1,12 +1,10 @@
 // Scroll down to the first slider
-const scrollToSecondButton = document.getElementById('down');
+const scrollToFirstButton = document.getElementById('down0');
     const moroccanSlider = document.getElementById('moroccan-slider');
 
-    scrollToSecondButton.addEventListener('click', function() {
-        // Calculate the distance to scroll
+    scrollToFirstButton.addEventListener('click', function() {
         const offset = moroccanSlider.offsetTop;
 
-        // Scroll smoothly to the next header
         window.scrollTo({
             top: offset,
             behavior: 'smooth'
@@ -14,13 +12,22 @@ const scrollToSecondButton = document.getElementById('down');
     });
 
 
+// Scroll down to the second slider
+const scrollToSecondButton = document.getElementById('down1');
+    const paintingsSlider = document.getElementById('home-main');
+
+    scrollToSecondButton.addEventListener('click', function() {
+        const offset = paintingsSlider.offsetTop;
+
+        window.scrollTo({
+            top: offset,
+            behavior: 'smooth'
+        });
+    });
+
 // Function to handle slider functionality
 function createSlider(sliderId, intervalTime) {
     const slider = document.getElementById(sliderId);
-    if (!slider) {
-        console.error(`Slider with ID '${sliderId}' not found.`);
-        return;
-    }
     const sliderImages = slider.querySelector('.slider-images');
     const sliderArrows = slider.querySelector('.slider-arrows');
     const leftArrow = sliderArrows.querySelector('.left-arrow');
@@ -99,7 +106,7 @@ function createSlider(sliderId, intervalTime) {
 }
 
 // Call the function to create the sliders
-createSlider('slider', 2500); // First slider
+createSlider('slider1', 2500); // First slider
 createSlider('slider2', 2500); // Second slider
 
 

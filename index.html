@@ -8,27 +8,28 @@
         <link rel="stylesheet" href="sharedstyle.css"> 
         <!-- To delete shared style later -->
         <link rel="stylesheet" href="homestyle.css">
-        <link rel="icon" href="images-testing/2.jpg" type="image/x-icon">
+        <link rel="icon" href="images/images-testing/1most-beautiful.png" type="image/x-icon">
         <script src="homejs.js" defer></script>
         <title>Home page</title>
     </head>
     
     <body>
-        <header>
+        <header class="negative-margin">
             <h1 id="first-h1">Stare at her enough...</h1>
-            <img id="first" src="images/images-testing/1most-beautiful.png" alt="Image of a young lady">
+            <!-- <img id="first" src="images/images-testing/1most-beautiful.png" alt="Image of a young lady"> -->
             <h1 id="second-h1">And it starts to look Alive </h1>
-            <img id="down" src="images/arrows/left.png" alt="Scroll-Down">
+            <img id="down0" src="images/arrows/down.png" alt="Scroll-Down">
         </header>
-        <div class="clear"></div>
 
         <header class="slider0-container" id="moroccan-slider">
             <div class="slider0-images">
                 <div class="slider0-text">
-                    <p> <span id="welcome">It goes without saying</span> <br> that Moroccan culture and art are incredibly rich, reflecting a blend of influences from various civilizations over the centuries. From bustling markets to intricate architecture, Morocco exudes a unique charm. Its art, including stunning architecture, vibrant textiles, and intricate metalwork, preserves the essence of Moroccan identity.
+                    <p> <span class="welcome">It goes without saying</span> <br> that Moroccan culture and art are incredibly rich, reflecting a blend of influences from various civilizations over the centuries. From bustling markets to intricate architecture, Morocco exudes a unique charm. Its art, including stunning architecture, vibrant textiles, and intricate metalwork, preserves the essence of Moroccan identity.
                     </p>
+                    <img id="down1" src="images/arrows/down.png" alt="Scroll-Down">
+                    <hr>
                 </div>
-                <div class="slider0-image-container" id="a">
+                <div class="slider0-image-container">
                     <img class="slider0-image" src="images/slider0/morocco3.jpg" alt="">
                     <img class="slider0-image" src="images/slider0/morocco2.jpg" alt="">
                     <img class="slider0-image" src="images/slider0/morocco4.jpg" alt="">
@@ -37,12 +38,12 @@
                 </div>
             </div>
         </header>
-        <!-- We've positioned this header outside main so that it takes full width of body, could just go for div or something else instead -->
        
-       
+
         <header id="home-main">
-            <header class="eighty">
-                <p id="paintings-p">Our job is to make sure that Moroccan identity is well known to the whole world, through featuring young Moroccan talents that thrive on depicting their origins in their own unique way. </p>
+                <p id="paintings-p"> <span class="welcome">Our job</span> is to make sure that Moroccan identity is well known to the whole world, through featuring young Moroccan talents that thrive on depicting their origins in their own unique way. <hr id="hrx"> <hr id="hry"> <hr id="hrz"> 
+                </p>
+                
                 <header class="slider-container">
                     <div class="slider-object active">
                           <img class="paintings" src="images/paintings/woman1.jpg" alt="Moroccan Woman">
@@ -66,8 +67,14 @@
                           <p class="title"> Old Medina <br> <span class="author">- Mehdi Ragani</span> </p>
                       </div>
                   </header>
-                <h1>Portraits</h1>
-                <header id="slider" class="slider">
+                
+                <br><br>
+                <h1>And so, we leave you to explore our Artful Atlas!</h1>
+                <br><br>
+                
+            <header class="flex">
+                <header id="slider1" class="slider">
+                    <h1>Our Artists</h1>
                     <div class="slider-images">
                         <img class="slider-image" src="/images/images-testing/1most-beautiful.png" alt="Image 1">
                         <img class="slider-image" src="/images/images-testing/2.jpg" alt="Image 2">
@@ -80,11 +87,12 @@
                         <img class="slider-arrow left-arrow" src="/images/arrows/left.png" alt="Previous">
                         <img class="slider-arrow right-arrow" src="/images/arrows/right.png" alt="Next">
                     </div>
-                </header>
+                </header> 
 
-                <hr id="hr1">
-                <h1>Absract</h1>
+                <h1>More about our  <a href="artists.html">artists</a></h1>
+
                 <header id="slider2" class="slider">
+                    <h1>A glimpse of their work</h1>
                     <div class="slider-images">
                         <img class="slider2-image" src="images/images-testing/second-type/1.jpeg">                    
                         <img class="slider2-image" src="images/images-testing/second-type/2.jpeg">
@@ -103,17 +111,18 @@
                         <img class="slider-arrow left-arrow" src="/images/arrows/left.png" alt="Previous">
                         <img class="slider-arrow right-arrow" src="/images/arrows/right.png" alt="Next">
                     </div>
-                    
                 </header>
-
+            </header>
                 <br><br>
+                <hr>
+                <h1>Testimonials!</h1>
                 <hr>
 
                 <footer class="footer1">
                     <h2>We got your attention?</h2>
-                    <p>You can check our other sections; starting with <a href="services.html">services</a> tab to check what we're currently offering, or with <a href="about.html">about us</a> tab to get a better idea about who we are.<br> You can also check <a href="store2.html">shop</a> tab if you want to buy a painting, or <a href="contact.html">contact</a> tab if you're interested in business!</p>
+                    <p>You can check our other sections; starting with <a href="services.html">services</a> tab to check what we're currently offering, or with <a href="about.html">about us</a> tab to get a better idea about who we are.<br> You can also check <a href="store2.html">shop</a> tab if you want to buy a painting, or <a href="contact.html">contact</a> tab if you're interested in business! <br> (Pss! Don't forget to take a look on our lovely <a href="artists.html">artists!</a>)</p>
                 </footer>
-            </header>
+            
         </header>
 
         <!-- <header class="separate"></header> -->

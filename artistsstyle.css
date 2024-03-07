@@ -1,0 +1,32 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color:whitesmoke;
+}
+
+/* Styling the side bar */
+
+h2 {
+    text-align:center;
+    margin:1% 0 1% 0;
+    background-color:rgba(0,0,0,0.1);
+    width:12%;
+}
+.filter-group {
+    font-size:larger;
+}
+.filter-group label {
+    width:13%;
+    display: block;
+    margin-bottom:1%;
+    cursor: pointer;
+}
+.filter-group label:hover {
+    font-weight:bolder;
+}
+input {
+    margin:1%;
+}
+
+.filter-group label.selected {
+    font-weight: bold;
+}

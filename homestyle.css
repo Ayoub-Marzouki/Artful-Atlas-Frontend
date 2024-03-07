@@ -13,14 +13,23 @@ body {
    text-align:center;
 }
 
-/* Specifying the background for what once was the home page */
-#home-main {
-    background-image:url(/images/background-images/2.jpg);
-    background-attachment:fixed;
+h1, h2, p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+/* making the very first header's margin negative, there's a space between the first header and the second header and I have no idea where it's coming from, so I'll fix it this way, at least temporarily  */
+.negative-margin {
+    z-index:999;
+    background-image:url(/images/images-testing/1most-beautiful.png);
+    width:100vw;
+    height:100vh;
+    background-attachment:scroll;
     background-size:cover;
+    background-position:bottom;
 }
 
 /* Setting up the first image to show up once user enters site */
+
 #first, #first-h1 {
     animation:FadeIn 5s forwards;
 }
@@ -41,27 +50,22 @@ body {
 #first {
     width:100vw;
     height:120vh;
-    float:right; 
-    /* Not sure what this float is for, so I'll keep it for now */
 }
 
 
 /* Scroll down to next section button */
-#down {
+#down0 {
     position:absolute;
     top:75%;
     left:87%;
     opacity:0;
-    animation:FadeIn 1s ease-in 7000ms forwards;
+    animation:FadeIn 1s ease-in 6000ms forwards, arrowAnimation 3s ease-in-out 6000ms infinite;
+    padding-bottom:3%;
 }
-#down:hover{
+
+#down0, #down1:hover{
     cursor:pointer;
 } 
-
-.clear {
-    clear:both;
-}
-
 /* Setting up the first slider that showcases Morocco */
 .slider0-container {
     position: relative;
@@ -81,17 +85,25 @@ body {
     color:whitesmoke;
     line-height:4vh;
     font-size:22px;
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;
     padding:5%;
+    padding-bottom:2%;
     position: absolute;
     top: 0;
     left: 0;
     z-index:99;
 }
+.slider0-text p {
+    /* Adding some styling through borders */
+    border-left:2px solid rgba(255, 255, 255, 0.3);
+    border-right:2px solid rgba(255, 255, 255, 0.3);
+}
+.slider0-text hr {
+    color:rgba(0,0,0,0.7);
+    width:50%;
+    margin:auto;
+}
 
-#welcome {
+.welcome {
     display:block;
     color:white;
     font-size:3vw;
@@ -118,13 +130,45 @@ body {
     opacity: 1;
 }
 
+
+/* Specifying the background for what once was the home page */
+#home-main {
+    position:relative;
+    background-image:url(/images/images-testing/1most-beautiful.png);
+    background-attachment:fixed;
+    background-size:cover;
+    background-position:bottom;
+}
+
+/* Styling the hrs of the second slider */
+#hrx, #hry, #hrz {
+    left:46vw;
+    position:absolute;
+    z-index:999;
+    color:rgba(255, 255, 255, 0.3);
+}
+#hrx {
+    top:130px;
+    width:9%;
+}
+#hry {
+    top:140px;
+    width:6%;
+    left:47.5vw;
+}
+#hrz {
+    top:150px;
+    width:3%;
+    left:49vw;
+}
+
 /* Style for the slider of paintings */
 
 #paintings-p {
     position:absolute;
     color:whitesmoke;
     line-height:5vh;
-    font-size:30px;
+    font-size:22px;
     padding:3%;
     background-color:rgba(0,0,0,0.5);
     z-index:999;
@@ -173,24 +217,14 @@ body {
     font-size:2vw;
 }
 
-/* Adding an "alive" effect to the spans */
-@keyframes alive {
-    0% {
-        font-size:45px;
-    }
-    25% {
-        font-size:48px;
-    }
-    100% {
-        font-size:45px;
-    }
-}
-
 h1 {
+    padding-bottom:1%;
     text-align:center;
     font-size:50px;
     font-style:italic;
 }
+/* Setting up the animations */
+
 /* Adding a fading effect to the slider images */
 @keyframes FadeIn {
     from {
@@ -200,12 +234,29 @@ h1 {
         opacity:1;
 }
 }
+/* Arrow animation */
+@keyframes arrowAnimation {
+    0%, 100% {
+        opacity: 0; /* Start and end with full opacity */
+        transform: translateY(0); /* Start and end at original position */
+    }
+    25%, 75% {
+        opacity: 1; /* Fade out and in during the middle of animation */
+        transform: translateY(20px); /* Move downwards during the middle of animation */
+    }
+}
 
 
-/* Positionning the sliders to the center */
+/* Displaying the sliders one next to the other */
+.flex {
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
 .slider {
     position: relative;
     width:500px;
+    height:700px;
     overflow: hidden;
     margin:auto;
     border-radius:1%;
@@ -238,9 +289,7 @@ h1 {
     cursor: pointer;
 }
 
-#hr1 {
-    margin:2%;
-}
+
 /* Styling the first footer of the page */
 .footer1 {
     font-size:25px;
@@ -248,18 +297,22 @@ h1 {
     margin-bottom:0%;
     padding-bottom:2%;
     text-align:center;
-    
+    background-color:rgba(255,255,255,0.6);
+
 }
-.footer1 a {
+a {
     text-decoration:none;
     font-weight:900;
 }
-.footer1 a:visited {
+a:visited {
     color:darkslategray;
 }
+
 /* Styling hr lines  */
 hr {
     color:rgba(0,0,0,0.3);
+    width:80%;
+    margin: 2% auto 2% auto;
 }
 
 
@@ -283,20 +336,34 @@ hr {
         top:30%;
     }
     #first {
-        width:150vw;
-        height:100vh;
+        width:100%;
+        height:70vh;
     }
-    /* @keyframes alive {
-        0% {
-            font-size:23px;
-        }
-        25% {
-            font-size:26px;
-        }
-        100% {
-            font-size:23px;
-        }
-    } */
+
+    #down0 {
+        top:60%;
+        left:45%;
+
+    }
+    #down0, #down1 {
+        width:20px;
+        height:40px;
+    }
+    .welcome {
+        font-size:9vw;
+    }
+    .paintings {
+        display:block;
+        width:auto;
+        height:auto;
+    }
+    .slider-object {
+        overflow:hidden;
+    }
+
+    #paintings-p {
+        font-size:18px;
+    }
 }
 @media only screen and (min-width:501px) and (max-width:600px) {
     #intro h1, h1 {
