@@ -1,31 +1,19 @@
-// Scroll down to the first slider
-const scrollToFirstButton = document.getElementById('down0');
-    const moroccanSlider = document.getElementById('moroccan-slider');
+// Scroll to slider
+function scrollToSlider(buttonId, sliderId) {
+    const scrollButton = document.getElementById(buttonId);
+    const slider = document.getElementById(sliderId);
 
-    scrollToFirstButton.addEventListener('click', function() {
-        const offset = moroccanSlider.offsetTop;
-
-        window.scrollTo({
-            top: offset,
-            behavior: 'smooth'
-        });
-    });
-
-
-// Scroll down to the second slider
-const scrollToSecondButton = document.getElementById('down1');
-    const paintingsSlider = document.getElementById('home-main');
-
-    scrollToSecondButton.addEventListener('click', function() {
-        const offset = paintingsSlider.offsetTop;
+    scrollButton.addEventListener('click', () => {
+        const offset = slider.offsetTop;
 
         window.scrollTo({
             top: offset,
             behavior: 'smooth'
         });
     });
+}
 
-// Function to handle slider functionality
+// Function to create sliders
 function createSlider(sliderId, intervalTime) {
     const slider = document.getElementById(sliderId);
     const sliderImages = slider.querySelector('.slider-images');
@@ -85,17 +73,19 @@ function createSlider(sliderId, intervalTime) {
 
     // Function to start the slider when it becomes visible
     function startSliderWhenVisible(entries, observer) {
-        if (entries[0].isIntersecting) {
-            startAutoSlide();
-            observer.disconnect();
-        }
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startAutoSlide();
+                observer.unobserve(entry.target);
+            }
+        });
     }
 
     // Create an Intersection Observer to trigger the slider when it becomes visible
     const observer = new IntersectionObserver(startSliderWhenVisible, {
         root: null,
         rootMargin: "0px",
-        threshold: 0.3, // Adjust the threshold as needed
+        threshold: 0.5, // Adjust the threshold as needed
     });
 
     observer.observe(slider);
@@ -106,13 +96,13 @@ function createSlider(sliderId, intervalTime) {
 }
 
 // Call the function to create the sliders
-createSlider('slider1', 2500); // First slider
-createSlider('slider2', 2500); // Second slider
+scrollToSlider('down0', 'moroccan-slider');
+scrollToSlider('down1', 'home-main');
 
+createSlider('slider1', 5000);
+createSlider('slider2', 2500);
 
-
-
-
+// Start slider on scroll
 const slider0Images = document.querySelectorAll('.slider0-image');
 let currentIndex0 = 0;
 let intervalId0 = null;
@@ -138,7 +128,15 @@ window.addEventListener('scroll', () => {
     const slider0Container = document.getElementById('moroccan-slider');
     const slider0Rect = slider0Container.getBoundingClientRect();
 
-    if (slider0Rect.top <= window.innerHeight && slider0Rect.bottom >= 0) {
+    // Calculate the midpoint of the slider
+    const sliderMidpoint = slider0Rect.top + slider0Rect.height / 2;
+
+    // Calculate the scroll position to consider the half-visibility
+    const halfViewportHeight = window.innerHeight / 2;
+    const scrollPosition = window.scrollY + halfViewportHeight;
+
+    // Check if the midpoint of the slider is within the visible portion of the viewport
+    if (sliderMidpoint <= scrollPosition && slider0Rect.bottom >= 0) {
         startSlider0();
     } else {
         stopSlider0();
@@ -146,25 +144,22 @@ window.addEventListener('scroll', () => {
 });
 
 
+// Fade slide functionality
+const sliderObjects = document.querySelectorAll('.slider-object');
 
-// Creating the slider of the featured paintings
+function fadeSlide(nextIndex) {
+    sliderObjects[currentIndex].classList.remove('active');
+    sliderObjects[nextIndex].classList.add('active');
+    currentIndex = nextIndex;
+}
 
-const sliderContainer = document.querySelector('.slider-container');
-const sliderObjects = sliderContainer.querySelectorAll('.slider-object');
+sliderObjects.forEach((slide, index) => {
+    slide.style.transitionDelay = `${(index + 1) * 0.1}s`; // Adjust the delay as needed
+});
 
 let currentIndex = 0;
 
-const fadeSlide = (nextIndex) => {
-  sliderObjects[currentIndex].classList.remove('active');
-  sliderObjects[nextIndex].classList.add('active');
-  currentIndex = nextIndex;
-};
-
-sliderObjects.forEach((slide, index) => {
-  slide.style.transitionDelay = `${(index + 1) * 0.1}s`; // Adjust the delay as needed
-});
-
 setInterval(() => {
-  const nextIndex = (currentIndex + 1) % sliderObjects.length;
-  fadeSlide(nextIndex);
+    const nextIndex = (currentIndex + 1) % sliderObjects.length;
+    fadeSlide(nextIndex);
 }, 4000); // interval time to adjust the slide duration

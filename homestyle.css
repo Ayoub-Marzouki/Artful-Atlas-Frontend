@@ -10,15 +10,19 @@ body {
    margin:auto;
    font-family:'Times New Roman', Times, serif;
    color:rgba(0,0,0,0.7);
+   color:whitesmoke;
    text-align:center;
 }
 
+/* Adding some shadow to text */
 h1, h2, p {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); 
 }
 
-/* making the very first header's margin negative, there's a space between the first header and the second header and I have no idea where it's coming from, so I'll fix it this way, at least temporarily  */
-.negative-margin {
+
+/* Styling the first header */
+
+.first-header {
     z-index:999;
     background-image:url(/images/images-testing/1most-beautiful.png);
     width:100vw;
@@ -27,6 +31,7 @@ h1, h2, p {
     background-size:cover;
     background-position:bottom;
 }
+
 
 /* Setting up the first image to show up once user enters site */
 
@@ -56,21 +61,29 @@ h1, h2, p {
 /* Scroll down to next section button */
 #down0 {
     position:absolute;
-    top:75%;
-    left:87%;
+    top:80%;
+    left:48%;
     opacity:0;
-    animation:FadeIn 1s ease-in 6000ms forwards, arrowAnimation 3s ease-in-out 6000ms infinite;
+    animation:FadeIn 1s ease-in 4500ms forwards, arrowAnimation 3s ease-in-out 4500ms infinite;
     padding-bottom:3%;
 }
 
 #down0, #down1:hover{
     cursor:pointer;
 } 
+
+#down1 {
+    margin:1%;
+    width:48px;
+    height:24px;
+}
+
 /* Setting up the first slider that showcases Morocco */
 .slider0-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 99vh; 
+    /* made height 99 and not 100 because for some reason it keeps leaving a very small space between the 2 sliders */
     overflow: hidden;
 }
 
@@ -134,10 +147,10 @@ h1, h2, p {
 /* Specifying the background for what once was the home page */
 #home-main {
     position:relative;
-    background-image:url(/images/images-testing/1most-beautiful.png);
+    background-image:url(/images/background-images/2-mostbeautiful.png);
     background-attachment:fixed;
     background-size:cover;
-    background-position:bottom;
+    background-position:top;
 }
 
 /* Styling the hrs of the second slider */
@@ -167,7 +180,6 @@ h1, h2, p {
 #paintings-p {
     position:absolute;
     color:whitesmoke;
-    line-height:5vh;
     font-size:22px;
     padding:3%;
     background-color:rgba(0,0,0,0.5);
@@ -246,7 +258,6 @@ h1 {
     }
 }
 
-
 /* Displaying the sliders one next to the other */
 .flex {
     display:flex;
@@ -259,7 +270,6 @@ h1 {
     height:700px;
     overflow: hidden;
     margin:auto;
-    border-radius:1%;
 }
 
 .slider-image, .slider2-image {
@@ -297,15 +307,28 @@ h1 {
     margin-bottom:0%;
     padding-bottom:2%;
     text-align:center;
-    background-color:rgba(255,255,255,0.6);
+    background-color: rgba(255, 192, 203, 0.6);
 
 }
+.footer1 h2 {
+    padding:1% 0;
+}
+.footer1 p {
+    padding:1%;
+}
 a {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color:crimson;
     text-decoration:none;
     font-weight:900;
+    transition:500ms ease;
 }
 a:visited {
-    color:darkslategray;
+    color:crimson;
+}
+a:hover {
+    color:lightblue;
+    transition:500ms ease;
 }
 
 /* Styling hr lines  */

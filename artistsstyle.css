@@ -1,30 +1,67 @@
 body {
     font-family:'Times New Roman', Times, serif;
-    background-color:whitesmoke;
+    background-color:white;
 }
 
-/* Styling the side bar */
 
-h2 {
+/* Making the sidebar fixed and stuck to the left */
+
+.sidebar {
+    width:30%;
+    position:sticky;
+    top:10%;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.sidebar h2 {
     text-align:center;
     margin:1% 0 1% 0;
-    background-color:rgba(0,0,0,0.1);
+    background-color:rgba(0,0,0,0.03);
     width:12%;
 }
 .filter-group {
     font-size:larger;
 }
 .filter-group label {
-    width:13%;
     display: block;
-    margin-bottom:1%;
+    margin:1%;
     cursor: pointer;
 }
 .filter-group label:hover {
     font-weight:bolder;
 }
-input {
-    margin:1%;
+
+/* Changing how the input tags look like */
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px; 
+    border-radius: 50%; 
+    border: 2px solid #999; 
+    outline: none;
+    cursor: pointer;
+}
+
+/* Style the custom checkbox when checked */
+input[type="checkbox"]:checked {
+    background-color: #333; 
+}
+
+/* Add a checkmark symbol using pseudo-elements */
+input[type="checkbox"]::before {
+    content: '\2713'; 
+    display: block;
+    text-align: center;
+    line-height: 20px; 
+    color: #fff; 
+    font-size: 16px; 
+    visibility: hidden; 
+}
+
+/* Show the checkmark when the checkbox is checked */
+input[type="checkbox"]:checked::before {
+    visibility: visible;
 }
 
 .filter-group label.selected {

@@ -13,7 +13,7 @@ body {
    /* background-image:linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0,0.9)); */
    background-attachment:fixed;
    background-size:cover;
-   font-family:cursive;
+   font-family:'Times New Roman', Times, serif;
 }
 
 /* Adjusting the content to take 80% of width */
@@ -22,37 +22,44 @@ main {
     width:80%;
 }
 
+/* !!!!!!!!!!!!  Navigation bar styling !!!!!!!!!!!!! */
+
 /* Fixing nav bar */
 .sticky {
     position:sticky;
     top:0;
     width:100%;
 }
+
 /* Messing with the logo */
-#symbol {
+/* #symbol {
     width:100%;
     text-align:center;
-}
+} */
+
+/* Fixing the size of the logo */
 .logo {
+    margin:1% 2%;
     width:230px;
     height:150px;
 }
+
 /* Adjusting position of home, services etc */
 .flexboxcontainer  {
+    background-color:rgba(0,0,0,0.4);
     display:flex;
-    justify-content:space-around;
+    justify-content:flex-end;
     align-items:center;
     font-size:23px;
+
 }
 /* Setting size of each part (home, services etc) */
 .flexbox {
-    flex:1; /*This will force each element to take equal space */
+    flex:1;
     text-align:center;
     text-decoration:none;
     list-style:none;
     padding:10px;
-    border-right:2px solid grey;
-    background-color:rgba(0,0,0,0.4);
     transition:300ms;
 }
 /* Removing right border of the last element of home services etc */
@@ -65,7 +72,44 @@ main {
     background-color:rgba(0,0,0,0.15);
     transition:300ms;
 }
-/* Styling last part of the page*/
+
+/* !!!!!!!!!!! Setting up a new style for the nav bar */
+
+/* .navbar-container {
+    background-color:rgba(0,0,0,0.4);
+}
+
+.navbar {
+    display:flex;
+    justify-content: flex-end;
+    position:absolute;
+    
+}
+.tab {
+    position: relative;
+    bottom: 110px;
+    left:250%;
+    z-index: 9999;
+    padding: 0 6%;
+    font-size: larger;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+
+.tab:hover {
+    border-bottom:2px solid white;
+}
+
+.tab:last-child {
+    padding-right:8%;
+} */
+
+
+
+
+/* !!!!!!!!!!!!!!!! Styling last part of the page !!!!!!!!!!!!!!!*/
 .footer2 {
     font-weight:100;
     font-size:medium;
@@ -73,7 +117,49 @@ main {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,1));
     text-align:center;
 }
+
+
+
+/* Making it phone friendly */
+
 @media only screen and (max-width:600px) {
+    /* .navbar {
+        position:static;
+    }
+    .tab {
+        position:static;
+    }
+    .tab:hover {
+        border-bottom:0px;
+
+    }
+    .tab:last-child {
+        padding-right:0;
+    }
+    .logo {
+        display:block;
+        margin:auto;
+    }
+    .flexboxcontainer  {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        font-size:15px;
+    }
+    .flexbox {
+        flex:1;
+        text-align:center;
+        text-decoration:none;
+        list-style:none;
+        padding:10px;
+        transition:300ms;
+    }
+    .flexbox:hover {
+        text-transform:capitalize;
+        font-weight:900;
+        background-color:rgba(0,0,0,0.15);
+        transition:300ms;
+    } */
     .flexboxcontainer {
         font-size:15px;
         flex-wrap:wrap;

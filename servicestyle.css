@@ -1,27 +1,45 @@
 /* adding some specifications to the body */
 body {
     background-image:url(/images/background-images/services-background2.jpg);
-    font-size:20px;
-    text-align:center;
+    font-size:25px;
 }
-/* changing text color of the nav bar */
+
+main {
+    background-color:rgba(0, 0, 0, 0.3);
+    padding:1%;
+}
+
+/* Fixing the first image of the logo : logo0 */
+
+/* changing text color of the nav bar, FIRST STYLE */
+.sticky {
+    position:static;
+}
 .flexbox {
-    color:burlywood;
+    font-size:25px;
+    color:white;
+    border-bottom:0px solid white;
 }
 .flexbox:nth-child(2) {
-    background-color:rgba(0,0,0,0.1);
+    background-color:rgba(0,0,0,0.5);
 }
+
+
+
 h1, h2, p {
+    text-align:center;
     font-weight:900;
     /* color:rgb(175, 136, 84); */
-    color:darksalmon;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    /* color:darksalmon; */
+    color:whitesmoke;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
 }
 h1, h2 {
     margin:2%;
 }
 a {
     text-decoration:none;
+    color:bisque;
 }
 
 @keyframes FadeIn {
