@@ -1,6 +1,6 @@
 body {
     /* The following concerns the obsolete version */
-    background-image:url(/images/background-images/test.jpg);
+    /* background-image:url(/images/background-images/test.jpg); */
     background-size:auto;
     background-attachment:scroll; 
     background-size:cover;
@@ -8,36 +8,27 @@ body {
     /* 
      This and size:cover can be used to adjust the image to fit the user's screen 
     */
-
-    line-height:200%;
-    color:azure;
-    font-size:20px; 
-    font-family:monospace;
 }
 main {
     width:100%;
 }
-.flexbox:nth-child(4) {
-    background-color:rgba(0,0,0,0.8);
-}
-.flexbox:nth-child(4):hover {
-    background-color:rgba(0,0,0,0.1);
-}
+
 .flexbox {
     color:antiquewhite;
 }
 h1 {
     text-align:center;
     margin:3%;
-    line-height:150%;
 }
-main .intro {
+
+/* Obsolete style */
+/* main .intro {
     width:60%;
     height:20%;
     margin-top:5%;
     padding:5% 5% 5% 1%;
     background-color:rgba(0,0,0,0.4);
-}
+} 
 #red {
     color:crimson;
 }
@@ -49,6 +40,8 @@ main .intro {
     float:right;
     margin:1%;
 }
+
+*/
 .clear {
     clear:both;
 }

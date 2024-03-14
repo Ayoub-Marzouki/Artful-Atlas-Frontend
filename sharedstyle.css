@@ -44,16 +44,24 @@ main {
     height:150px;
 }
 
+.logo0 {
+    width:400px;
+    height:80px;
+}
+
 /* Adjusting position of home, services etc */
 .flexboxcontainer  {
     background-color:rgba(0,0,0,0.4);
     display:flex;
-    justify-content:flex-end;
     align-items:center;
     font-size:23px;
 
 }
 /* Setting size of each part (home, services etc) */
+.flexbox:first-child{
+    padding-left:1%;
+    padding-right:30%;
+}
 .flexbox {
     flex:1;
     text-align:center;
@@ -62,53 +70,26 @@ main {
     padding:10px;
     transition:300ms;
 }
-/* Removing right border of the last element of home services etc */
-.flexbox:last-child {
-    border-right:none;
-}
 .flexbox:hover {
-    text-transform:capitalize;
     font-weight:900;
-    background-color:rgba(0,0,0,0.15);
-    transition:300ms;
+    color:brown;
 }
 
-/* !!!!!!!!!!! Setting up a new style for the nav bar */
-
-/* .navbar-container {
-    background-color:rgba(0,0,0,0.4);
+.flexbox::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background:white;
+    transition: width .3s;
+    margin-top:4px;
 }
-
-.navbar {
-    display:flex;
-    justify-content: flex-end;
-    position:absolute;
-    
+.flexbox:hover::after {
+    width:100%;
 }
-.tab {
-    position: relative;
-    bottom: 110px;
-    left:250%;
-    z-index: 9999;
-    padding: 0 6%;
-    font-size: larger;
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
+.flexbox:first-child:hover::after{
+    width:0;
 }
-
-
-.tab:hover {
-    border-bottom:2px solid white;
-}
-
-.tab:last-child {
-    padding-right:8%;
-} */
-
-
-
-
 /* !!!!!!!!!!!!!!!! Styling last part of the page !!!!!!!!!!!!!!!*/
 .footer2 {
     font-weight:100;
@@ -123,53 +104,36 @@ main {
 /* Making it phone friendly */
 
 @media only screen and (max-width:600px) {
-    /* .navbar {
-        position:static;
-    }
-    .tab {
-        position:static;
-    }
-    .tab:hover {
-        border-bottom:0px;
-
-    }
-    .tab:last-child {
-        padding-right:0;
-    }
-    .logo {
-        display:block;
-        margin:auto;
-    }
-    .flexboxcontainer  {
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        font-size:15px;
-    }
-    .flexbox {
-        flex:1;
-        text-align:center;
-        text-decoration:none;
-        list-style:none;
-        padding:10px;
-        transition:300ms;
-    }
-    .flexbox:hover {
-        text-transform:capitalize;
-        font-weight:900;
-        background-color:rgba(0,0,0,0.15);
-        transition:300ms;
-    } */
     .flexboxcontainer {
         font-size:15px;
         flex-wrap:wrap;
+        justify-content:center;
     }
     .flexbox {
         padding:6px;
+        flex:none;
+        width:100%;
+    }
+    .flexbox:first-child{
+        order:-1; /* Making sure that logo stays at the top */
+        padding:10px;
     }
 }
 @media only screen and (min-width:600px) and (max-width:1200px) {
     .flexboxcontainer {
         font-size:18px;
+        flex-wrap:wrap;
+        justify-content:space-evenly;
+    }
+    .flexbox {
+        flex:none;
+    }
+    .flexbox:first-child {
+        width:100%;
+        padding:0;
+        order:-1;   
+    }
+    .flexbox:hover {
+        font-weight:none;
     }
 }

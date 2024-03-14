@@ -6,10 +6,9 @@ body {
     font-size:20px;
 }
 .flexbox {
-    color:rgb(0, 0, 139);
-}
-.flexbox:nth-child(3) {
-    background-color:rgba(0,0,0,0.2);
+    color:lightblue;
+    font-weight:900;
+    text-shadow:1px 1px 2px black;
 }
 a {
     text-decoration:none;
@@ -18,7 +17,7 @@ h1, p {
     font-weight:900;
     text-align:center;
     margin:2%;
-    color:rgba(0, 0, 139, 0.562);
+    color:darkblue;
 }
 /* Modifying the border of google maps */
 iframe {

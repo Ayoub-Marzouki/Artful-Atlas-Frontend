@@ -9,22 +9,14 @@ main {
     padding:1%;
 }
 
-/* Fixing the first image of the logo : logo0 */
-
-/* changing text color of the nav bar, FIRST STYLE */
+/* Adjusting the nav bar to this specific page */
 .sticky {
-    position:static;
+    z-index:99999;
 }
 .flexbox {
     font-size:25px;
     color:white;
-    border-bottom:0px solid white;
 }
-.flexbox:nth-child(2) {
-    background-color:rgba(0,0,0,0.5);
-}
-
-
 
 h1, h2, p {
     text-align:center;
@@ -34,6 +26,7 @@ h1, h2, p {
     color:whitesmoke;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
 }
+
 h1, h2 {
     margin:2%;
 }
@@ -54,12 +47,48 @@ a {
     display:flex;
     justify-content:space-around;
     align-items:center;
+    overflow:auto;
 }
 .slider-image {
-    height:500px;
     width:500px;
+    height:500px;
     animation:FadeIn 3s;
 }
+
+/* Adjusting the styles header */
+.styles-image {
+    width: 500px; 
+    height: 600px;
+    margin:1%;
+}
+
+/* Alternating between left and right (nth-child(even/odd) doesn't work for some reason */
+.left {
+    float:left;
+}
+.right {
+    float:right;
+}
+
+.style-item {
+    overflow:auto;
+}
+.clear {
+    clear:both;
+}
+
+/* Forcing the paragraphs to be centered vertically */
+.type-writer {
+    padding-top:15%;
+    padding-bottom:15%;
+}
+
+/* Adding some space to "Choose" paragraphs */
+.choose {
+    margin:1% 0 5% 0;
+}
+
+
 /* Changing footer paragraphs */
 .footer2 p {
     font-weight:100;
@@ -68,8 +97,16 @@ a {
 
 /* Making the page mobile friendly */
 @media only screen and (max-width:600px) {
+    /* Fixing nav bar */
+    .sticky {
+        position:static;
+    }
     body {
         font-size:18px;
+        background-position-x:right;
+    }
+    main {
+        width:100%;
     }
     h1 , h2 {
         margin:10% 0;
@@ -79,18 +116,45 @@ a {
         display:block;
     }
     .slider-image {
-        margin:2%;
+        margin:auto;
         width:80vw;
         height:50vh;
     }
+    /* As for the styles */
+    .styles-image {
+        width:100%;
+        margin:0;
+        margin-bottom:1%;
+        height:auto;
+    }
+    .type-writer {
+        padding-bottom:20px;
+    }
 }
 @media only screen and (min-width:600px) and (max-width:1200px) {
+    /* Fixing nav bar */
+    .sticky {
+        position:static;
+    }
+    main {
+        width:90%;
+    }
     .slider {
         display:block;
+        margin:auto;
     }
     .slider-image {
-        margin:2%;
+        margin:auto;
+        margin-bottom:5%;
         width:80vw;
         height:75vh;
+    }
+    .styles-image {
+        margin:0 9%;
+        width:300px;
+        height:400px;
+    }
+    .type-writer {
+        padding:40px;
     }
 }
