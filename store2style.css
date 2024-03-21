@@ -22,18 +22,9 @@ main {
     width:100%;
 }
 
-/* Resetting color of home, services etc */
-.flexbox {
-    color:rgba(0,0,0,0.7);
-    padding:1%;
-}
 /* Making the nav bar stay right where it is */
 .sticky {
     position:relative;
-}
-
-.flexbox:last-child {
-    background-color:rgba(0,0,0,0.3);
 }
 
 /* Setting some space between "Artworks" and "Featured products " */

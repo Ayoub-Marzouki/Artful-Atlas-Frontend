@@ -51,24 +51,30 @@ main {
 
 /* Adjusting position of home, services etc */
 .flexboxcontainer  {
+    font-family:monospace;
     background-color:rgba(0,0,0,0.4);
+    background-color:#212a2f;
     display:flex;
     align-items:center;
     font-size:23px;
 
 }
+
 /* Setting size of each part (home, services etc) */
 .flexbox:first-child{
     padding-left:1%;
     padding-right:30%;
 }
 .flexbox {
+    font-weight:bold;
+    color:whitesmoke;
     flex:1;
     text-align:center;
     text-decoration:none;
     list-style:none;
     padding:10px;
     transition:300ms;
+    text-shadow:1px 1px 2px black;
 }
 .flexbox:hover {
     font-weight:900;
@@ -90,6 +96,7 @@ main {
 .flexbox:first-child:hover::after{
     width:0;
 }
+
 
 /* !!!!!!!!!!!!!!!! Styling last part of the page !!!!!!!!!!!!!!!*/
 .footer2 {
@@ -127,6 +134,11 @@ main {
     color:rgba(0,0,0,0.3);
     width:80%;
     margin: 2% auto 2% auto;
+}
+
+.footer2 br {
+    display:block;
+    margin:2%;
 }
 
 /* Changing the display of footer2 to grid */

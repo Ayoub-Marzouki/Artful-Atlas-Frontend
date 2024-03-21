@@ -35,14 +35,10 @@ body {
     */
 }
 main {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Luci Sans Unicode', Geneva, Verdana, sans-serif;
     width:80%;
     font-size:21px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.flexbox {
-    color:antiquewhite;
 }
 
 h1 , h3 {
@@ -61,6 +57,11 @@ h1 , h3 {
     display:block;
     margin:auto;
 }
+li {
+    list-style-type:'\2713';
+    list-style-position:outside;
+}
+
 
 strong {
     color:lightseagreen;

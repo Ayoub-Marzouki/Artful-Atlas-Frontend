@@ -102,6 +102,8 @@ scrollToSlider('down1', 'home-main');
 createSlider('slider1', 5000);
 createSlider('slider2', 2500);
 
+
+
 // Start slider on scroll
 const slider0Images = document.querySelectorAll('.slider0-image');
 let currentIndex0 = 0;

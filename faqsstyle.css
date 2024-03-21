@@ -8,6 +8,22 @@ main {
     color:white;
 }
 
+/* Stlying help header */
+#help {
+    background-color:#212a2f;
+}
+#help h1 {
+    font-size:50px;
+    margin-top:0;
+    padding:3%;
+    color:white;
+}
+
+#help a {
+    font-size:larger;
+    padding:3%;
+}
+
 /* Styling faqs header */
 aside {
     width:80%;
@@ -36,11 +52,6 @@ p:hover {
     cursor:auto;
 }
 
-li {
-    list-style-type:'\2713';
-    list-style-position:outside;
-}
-
 a {
     text-decoration:none;
     font-weight:900;
@@ -55,9 +66,7 @@ a:hover {
     display:block;
     color:white;
     font-weight:900;
-    font-size:15px;
     width:18%;
-    background-color:rgba(0,0,0,0.8);
     margin:auto;
     padding:1.5% 0;
     text-align:center;
@@ -65,8 +74,9 @@ a:hover {
 }
 
 #contact:hover {
-    width:23%;
     transition:300ms;
+    font-size:25px;
+    color:cornflowerblue;
 }
 
 .hr {

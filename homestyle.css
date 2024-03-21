@@ -56,12 +56,12 @@ h1, h2, p {
     position:absolute;
     top:80%;
     left:2%;
-    opacity:0;
-    animation:FadeIn 3s linear 5s forwards;
+    /* opacity:0;
+    animation:FadeIn 3s linear 5s forwards; */
 }
 #fourth-h1 {
     left:75%;
-    animation:FadeIn 3s linear 4s forwards;
+    /* animation:FadeIn 3s linear 4s forwards; */
 }
 #first {
     width:100vw;
@@ -75,7 +75,7 @@ h1, h2, p {
     top:80%;
     left:48%;
     opacity:0;
-    animation:FadeIn 1s ease-in 4500ms forwards, arrowAnimation 3s ease-in-out 4500ms infinite;
+    animation:FadeIn 1s ease-in 2s forwards, arrowAnimation 3s ease-in-out 2s infinite;
     padding-bottom:3%;
 }
 
@@ -93,8 +93,7 @@ h1, h2, p {
 .slider0-container {
     position: relative;
     width: 100%;
-    height: 99vh; 
-    /* made height 99 and not 100 because for some reason it keeps leaving a very small space between the 2 sliders */
+    height: 100vh; 
     overflow: hidden;
 }
 
@@ -120,6 +119,7 @@ h1, h2, p {
     /* Adding some styling through borders */
     border-left:2px solid rgba(255, 255, 255, 0.3);
     border-right:2px solid rgba(255, 255, 255, 0.3);
+    padding:1%;
 }
 .slider0-text hr {
     color:rgba(0,0,0,0.7);
@@ -132,6 +132,10 @@ h1, h2, p {
     color:white;
     font-size:3vw;
     margin:3%;
+}
+
+.welcome:last-child {
+    margin:2%;
 }
 
 .slider0-image-container {
@@ -190,13 +194,21 @@ h1, h2, p {
 /* Style for the slider of paintings */
 
 #paintings-p {
-    position:absolute;
-    color:whitesmoke;
-    font-size:22px;
-    padding:3%;
     background-color:rgba(0,0,0,0.5);
-    z-index:999;
-    font-style:normal;
+    color:whitesmoke;
+    line-height:4vh;
+    font-size:22px;
+    padding:5%;
+    padding-bottom:1%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:99;
+}
+#paintings-p p {
+    padding:1%;
+    border-left:2px solid rgba(255, 255, 255, 0.3);
+    border-right:2px solid rgba(255, 255, 255, 0.3);
 }
 .slider-container {
     background-color:rgb(60,22,46);
@@ -245,6 +257,8 @@ h1 {
     padding-bottom:1%;
     text-align:center;
     font-size:50px;
+}
+.first-header h1 {
     font-style:italic;
 }
 /* Setting up the animations */
@@ -274,18 +288,13 @@ h1 {
 #explore {
     background-image:url(/images/background-images/2-mostbeautiful.png);
     width:100%;
-    height:100vh;
+    height:110vh;
     background-attachment:fixed;
     background-size:cover;
     background-position:top;
     display:flex;
     justify-content:center;
     align-items:center;
-}
-
-/* Changing the color of the nav bar's text */
-.flexbox {
-    color:white;
 }
 
 .sticky {

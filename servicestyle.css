@@ -13,10 +13,6 @@ main {
 .sticky {
     z-index:99999;
 }
-.flexbox {
-    font-size:25px;
-    color:white;
-}
 
 h1, h2, p {
     text-align:center;

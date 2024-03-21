@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sharedstyle.css">
     <link rel="stylesheet" href="faqsstyle.css">
-    <title>Document</title>
+    <title>Frequently Asked Questions</title>
 </head>
 <body>
     <header class="sticky">
@@ -21,12 +21,18 @@
             <a class="flexbox" href="store2.html">Store</a>
         </nav>
     </header>
+    <!-- Positioned this header so that it takes 100% width of body -->
+    <header id="help">
+        <h1>How may we help?</h1>
+        <a href="contact.html" id="contact">Contact us here</a>
+        <br><br>
+    </header>
 
     <main>
         <header id="faqs">
-            <h1>FAQs</h1>
+            <h1>Frequently Asked Questions</h1>
             <aside>
-                <details title="Click to read the answer!">
+                <details title="Click to read the answer!" open>
                     <summary> How can I purchase artwork on your website? </summary>
                     <p>Simply sign up (not mandatory tatchof kidir t9ad hadi), go to the <a href="store2.html">store</a> and start the journey!</p>
                 </details>
@@ -81,48 +87,52 @@
                 </details>
             </aside>
             <aside>
-                <details>
+                <details open>
                     <summary>How do I stay updated on new artworks, artists, and promotions?</summary>
                     <p>Simply enter your email <a href="contact.html">here</a> at the "Stay informed" section and you're going to receive emails regarding everything you want to know and stay updated to!</p>
                 </details>
             </aside>
-            <h3>Still have questions?</h3>
-            <a href="contact.html" id="contact">Contact us!</a>
             <br> <br>
         </header>
 
         <hr class="hr">
         
     </main>
-        <footer class="footer2">
-            <div class="parent">
-                <div class="div1">
-                    <h3 class="gridbox">How may we help you?</h3>
-                    <p><a href="faqs.html">FAQS</a></p>
-                    <br>
-                    <p><a href="contact.html">Contact us</a></p> 
-                </div>
-
-                <div class="div2"> 
-                    <h3>Learn more</h3>
-                    <p>Learn more <a href="about.html">about us</a></p>
-                </div>
-
-                <div class="div3">
-                    <h3>Customer services</h3>
-                    <p>Discover our <a href="services.html">services</a></p>
-                </div>
+    <footer class="footer2">
+        <div class="parent">
+            <div class="div1">
+                <h3 class="gridbox">How may we help you?</h3>
+                <p><a href="faqs.html">FAQS</a></p>
+                <br>
+                <p><a href="contact.html">Contact us</a></p> 
             </div>
-            <div class="div4">
-                <h3>language</h3>
-                    <p>English - <a href="">Change</a></p>
+
+            <div class="div2"> 
+                <h3>Learn more</h3>
+                <p>Learn more <a href="about.html">about us</a></p>
+                <br>
+                <p>Learn more about our <a href="artists.html">artists</a></p>
             </div>
-            <br>
-            <br>
-            <p>Copyright &copy; 2024 Artful Atlas. All rights reserved</p>
-            <hr>
-            <a href="index.html"><img class="logo" src="images/logos-images/logo.png" alt="Artful Atlas Logo"></a>
-        </footer>
+
+            <div class="div3">
+                <h3>Customer services</h3>
+                <p>Discover our <a href="services.html">services</a></p>
+            </div>
+        <div class="div4">
+            <h3>Shop now</h3>
+            <p>Visit our <a href="store2.html">store</a></p>
+        </div>
+        <div class="div5">
+            <h3>language</h3>
+                <p>English - <a href="">Change</a></p>
+        </div>
+    </div>
+        <br>
+        <br>
+        <p>Copyright &copy; 2024 Artful Atlas. All rights reserved</p>
+        <hr>
+        <a href="index.html"><img class="logo" src="images/logos-images/logo.png" alt="Artful Atlas Logo"></a>
+    </footer>
     
 </body>
 </html>
