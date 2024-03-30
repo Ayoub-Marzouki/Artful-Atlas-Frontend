@@ -5,29 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sharedstyle.css">
-    <link rel="stylesheet" href="sign-upstyle.css">
+    <link rel="stylesheet" href="loginstyle.css">
     <link rel="icon" href="images/logos-images/logo.png" type="image/x-icon">
-    <title>Sign up</title>
+    <title>Log in</title>
 </head>
 <body>
     <main>
         <img class="logo0" src="images/logos-images/logo0.png" alt="Artful Atlas">
         <header id="form">
-            <h1>Create an Account</h1>
-            <p id="login">Already have an account? <a href="login.html">Login</a></p>
-
-            <input type="text" placeholder="Username">
-            <br>
-            <input type="email" placeholder="Email">
-            <br>
-            <input type="password" placeholder="Password">
-            <br>
-            <input type="text" placeholder="Confirm Password">
-            <p>Select one of the options :</p>
-
-            <p>+ I'm an Art Enthusiast</p>
-            <p>+ I'm an Artist</p>
-            <br>
+            <h1>Log in to Artful Atlas</h1>
+            <p id="sign-up">New to Artful Atlas? <a href="sign-up.html">Sign up</a></p>
+            <form action="" method="post">
+                <!-- {% csrf_token %}  -->
+                <input type="email" required name="email" placeholder="Email">
+                <br>
+                <input type="password" required name="password" placeholder="Password">
+                <br>
+                <input type="checkbox" name="Remember me" id="remember" value="remember">
+                <label for="remember">Remember me</label> &nbsp;
+                <a href="#">Forgot password?</a>
+            </form>
             <button id="submit" type="submit">Submit & Register</button>
 
             <hr class="hr">
