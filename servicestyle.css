@@ -1,11 +1,10 @@
 /* adding some specifications to the body */
 body {
-    background-image:url(/images/background-images/services-background2.jpg);
+    background-image:url(/images/background-images/services-background3.jpg);
     font-size:25px;
 }
 
 main {
-    background-color:rgba(0, 0, 0, 0.3);
     padding:1%;
 }
 
