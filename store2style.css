@@ -1,7 +1,5 @@
 /* Messing with background color, and font family of text */
 body {
-    background-image:url(images/background-images/5-storetest2.jpg);
-    background-color:azure;
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align:center;
     font-size:larger;
@@ -23,9 +21,9 @@ main {
 }
 
 /* Making the nav bar stay right where it is */
-.sticky {
+/* .sticky {
     position:relative;
-}
+} */
 
 /* Setting some space between "Artworks" and "Featured products " */
 h1 {
@@ -200,7 +198,7 @@ figure:hover .view-more {
     top:15%;
     left: 90%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color:lightseagreen;
     color:white;
     padding: 10px 20px;
     border-radius: 5px;

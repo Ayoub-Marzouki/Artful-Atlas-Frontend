@@ -7,7 +7,6 @@ body {
     color:rgba(0,0,0,0.7);
     font-family:monospace;
     background-color:whitesmoke;
-    background-image:linear-gradient(to bottom,whitesmoke,lightseagreen);
     background-attachment:scroll;
 }
 

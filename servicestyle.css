@@ -1,5 +1,7 @@
 /* adding some specifications to the body */
 body {
+    background-attachment: fixed;
+    background-size:cover;
     background-image:url(/images/background-images/services-background3.jpg);
     font-size:25px;
 }

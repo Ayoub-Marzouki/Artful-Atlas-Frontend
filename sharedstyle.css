@@ -14,6 +14,8 @@ body {
    background-attachment:fixed;
    background-size:cover;
    font-family:'Times New Roman', Times, serif;
+   font-family:monospace;
+   background-image:linear-gradient(to bottom, white, lightblue , white);
 }
 
 /* Adjusting the content to take 80% of width */
@@ -52,8 +54,8 @@ main {
 /* Adjusting position of home, services etc */
 .flexboxcontainer  {
     font-family:monospace;
-    background-color:rgba(0,0,0,0.4);
-    background-color:#212a2f;
+    /* background-color:rgba(0,0,0,0.4);
+    background-color:#212a2f; */
     display:flex;
     align-items:center;
     font-size:23px;
@@ -80,8 +82,8 @@ main {
     content: '';
     display: block;
     width: 0;
-    height: 2px;
-    background:white;
+    height: 3px;
+    background:lightblue;
     transition: width .3s;
     margin-top:4px;
 }
@@ -100,7 +102,7 @@ main {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #212a2f;
+    /* background-color: #212a2f; */
     z-index: 1;
 }
 
@@ -109,14 +111,13 @@ main {
     padding: 10px;
     text-decoration: none;
     display: block;
-    transition: background-color 0.3s;
-    transition: color 300ms;
+    transition:500ms;
 }
 
 .dropdown-content a:hover {
-    background-color: #343a40;
+    /* background-color: #343a40; */
     color:lightseagreen;
-    transition:300ms;
+    transition:500ms;
 }
 
 .dropdown:hover .dropdown-content {
