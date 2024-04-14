@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="sharedstyle.css">
         <link rel="stylesheet" href="store2style.css">
         <script src="store2js.js" defer></script>
+        <script src="add-to-cart.js" defer></script>
         <title>Store page</title>
     </head>
 
@@ -30,6 +31,10 @@
                         <a href="#">Logout</a>
                     </div>
                 </div>
+                <div class="flexbox cart">
+                    <img src="images/icons/cart.png" alt="cart icon" width="25" height="25">
+                    <span id="cart-counter">3</span>
+                </div>
             </nav>
         </header>
         <div id="message-container">Item added!</div>
@@ -44,12 +49,6 @@
             </figure>
           </header>
         <h1>Featured Products  <br><br> </h1>
-        <div class="cart">
-            <img src="images/icons/cart.png" alt="cart icon" width="30" height="30">
-            <span class="cart-word">Cart</span>
-            <span id="cart-counter">0</span>
-        </div>
-
 
         <header class="store">
             <figure>
