@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sharedstyle.css"> 
+    <link rel="stylesheet" href="checkoutstyle.css">
+    <title>Cart</title>
+</head>
+<body>
+    <header id="nav" class="sticky">
+        <nav class="flexboxcontainer">
+            <a class="flexbox" href="index.html"><img class="logo0" src="images/logos-images/logo0.png" alt=""></a>
+            <a class="flexbox" href="index.html">Home</a>
+            <a class="flexbox" href="services.html">Services</a>
+            <a class="flexbox" href="contact.html">Contact</a>
+            <a class="flexbox" href="sell.html">Sell</a>
+            <a class="flexbox" href="about.html">About</a>
+            <a class="flexbox" href="artists.html">Artists</a>
+            <a class="flexbox" href="store2.html">Store</a>
+            <div class="flexbox dropdown">
+                <a>Account</a>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div class="flexbox cart">
+                <img src="images/icons/cart.png" alt="cart icon" width="25" height="25">
+                <span id="cart-counter">3</span>
+            </div>
+        </nav>
+    </header>
+    
+
+    <main>
+        <div class="flex-main">
+            <header id="checkout">
+                <h1>Checkout</h1>
+                <p id="products-number">Currently : {{totalCartItems}} products in your cart.</p>
+                <br>
+                <p id="login">Already have an account? <a href="login.html">Login</a> for a faster checkout!</p>
+                <br>
+                <label for="first-name">First name</label>
+                <input type="text" name="first-name" id="first-name" placeholder="First name">
+                <br>
+                <label for="first-name">Last name</label>
+                <input type="text" name="first-name" id="first-name" placeholder="First name">
+                <br>
+                <label for="first-name">Address</label>
+                <input type="text" name="first-name" id="first-name" placeholder="First name">
+                <br>
+                <label for="first-name">Post Code</label>
+                <input type="text" name="first-name" id="first-name" placeholder="First name">
+                <br>
+                <label for="city">City:</label> <br>
+                <select id="city" name="city" required>
+                    <option value="">Select a city...</option>
+                    <option value="New York">New York</option>
+                    <option value="London">London</option>
+                    <option value="Tokyo">Tokyo</option>
+                </select> 
+                <br>       
+                <label for="city">Country:</label> <br>
+                <select id="country" name="country" required>
+                    <option value="">Select a country...</option>
+                    <option value="USA">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="Japan">Japan</option>
+                </select>
+            </header>
+
+            <div id="cart-items">
+                <header id="added-artworks">
+                    <h1>Artworks</h1>
+                    <a href="cart.html">Back to cart</a> <!--{% url 'home:cart' %}-->
+                    <br>
+                    <br>
+                     <!-- {% for product_id, item in cart_data_items %} -->
+                        <section class="flex">
+                            <figure>
+                                <img class="artwork-image" src="images/paintings/elderly-riad.png" alt=""> <!-- item.image-->
+                                <figcaption class="artwork-title">Elderly Riad</figcaption> <!-- item.title-->
+                            </figure>
+
+                            <h3>- Si Mehdi</h3> <!-- item.artist-->
+                        </section>
+                        <br><br><br>
+                        <hr>
+                        <br><br><br>
+                    <!-- {% endfor %} -->
+                    <section class="flex">
+                        <figure>
+                            <a href=""><img class="artwork-image" src="images/paintings/elderly-riad.png" alt="">
+                            <figcaption class="artwork-title">Elderly Riad</figcaption>
+                            </a>
+                        </figure>
+
+                        <h3><a class="artwork-artist" href="">- Si Mehdi</a></h3>
+                    </section>
+                    <br><br><br>
+                    <hr>
+                    <br><br><br>
+                    <section class="flex">
+                        <figure>
+                            <a href=""><img class="artwork-image" src="images/paintings/elderly-riad.png" alt="">
+                            <figcaption class="artwork-title">Elderly Riad</figcaption>
+                            </a>
+                        </figure>
+
+                        <h3><a class="artwork-artist" href="">- Si Mehdi</a></h3>
+                    </section>
+                </header>
+            </div>
+        </div>
+        <br><br><br><br>
+        <header id="place-order">
+            <section class="total">
+                <h3>Total (in dh)</h3>
+                <h2 id="total-price">{{total_price}}</h2>
+            </section>
+
+            <section class="place-order">
+                <button id="place-order-button">Place Order</button>
+            </section>
+        </header>
+    </main>
+    <br><br>
+
+    <footer class="footer2">
+        <div class="parent">
+            <div class="div1">
+                <h3 class="gridbox">How may we help you?</h3>
+                <p><a href="faqs.html">FAQS</a></p>
+                <br>
+                <p><a href="contact.html">Contact us</a></p> 
+            </div>
+
+            <div class="div2"> 
+                <h3>Learn more</h3>
+                <p>Learn more <a href="about.html">about us</a></p>
+                <br>
+                <p>Learn more about our <a href="artists.html">artists</a></p>
+            </div>
+
+            <div class="div3">
+                <h3>Customer services</h3>
+                <p>Discover our <a href="services.html">services</a></p>
+            </div>
+        <div class="div4">
+            <h3>Shop now</h3>
+            <p>Visit our <a href="store2.html">store</a></p>
+        </div>
+        <div class="div5">
+            <h3>language</h3>
+                <p>English - <a href="">Change</a></p>
+        </div>
+    </div>
+        <br>
+        <br>
+        <p>Copyright &copy; 2024 Artful Atlas. All rights reserved</p>
+        <hr>
+        <a href="index.html"><img class="logo" src="images/logos-images/logo.png" alt="Artful Atlas Logo"></a>
+    </footer>
+</body>
+</html>
