@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sharedstyle.css">
+    <link rel="stylesheet" href="dashboardstyle.css">
+    <script src="dashboardjs.js" defer></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <header id="nav" class="sticky">
+        <nav class="flexboxcontainer">
+            <a class="flexbox" href="index.html"><img class="logo0" src="images/logos-images/logo0.png" alt=""></a>
+            <a class="flexbox" href="index.html">Home</a>
+            <a class="flexbox" href="services.html">Services</a>
+            <a class="flexbox" href="contact.html">Contact</a>
+            <a class="flexbox" href="sell.html">Sell</a>
+            <a class="flexbox" href="about.html">About</a>
+            <a class="flexbox" href="artists.html">Artists</a>
+            <a class="flexbox" href="store2.html">Store</a>
+            <div class="flexbox dropdown">
+                <a>Account</a>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div class="flexbox cart">
+                <a href="cart.html">
+                    <img src="images/icons/cart.png" alt="cart icon" width="25" height="25">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="main">
+        <section id="secondary-nav">
+            <div class="flex tab" id="dashboard-tab">
+                <img class="icons" src="images/icons/filter.png" alt="">
+                <span>Dashboard</span>
+            </div>
+        
+            <div class="flex tab"  id="orders-tab">
+                <img class="icons" src="images/icons/orders.png" alt=""> 
+                <span>Orders</span>
+            </div>
+        
+            <!-- <div class="flex tab" id="track-orders-tab">
+                <img class="icons" src="images/icons/cart.png" alt=""> 
+                <span>Track your Order</span>
+            </div> -->
+        
+            <div class="flex tab" id="addresses-tab">
+                <img class="icons" src="images/icons/location.png" alt=""> 
+                <span>Addresses</span>
+            </div>
+        
+            <div class="flex tab" id="account-details-tab">
+                <img class="icons" src="images/icons/account.png" alt=""> 
+                <span>Account details</span>
+            </div>
+        
+            <div class="flex">
+                <img class="icons" src="images/icons/logout.png" alt=""> 
+                <a href="">Logout</a>
+            </div>
+        </section>
+        
+        
+        <section id="dashboard" class="content">
+            <h1>Hello Sir!</h1>
+            <p>In your account dashboard, you can easily keep track of your recent <strong>orders</strong>, update your <strong>shipping and billing addresses</strong>, and manage <strong>your password and account settings </strong>hassle-free.</p>
+        </section>
+
+        <section id="orders" class="content flex-item">
+            <h1>orders</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#431</td>
+                        <td>Date</td>
+                        <td>Processing</td>
+                        <td>4000</td>
+                        <td>test</td>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- <section id="track-orders" class="content">
+            <h1>Track your orders</h1>
+            <p>simply by entering your OrderId w man3rf mhm tat3mer had tkherbi9</p>
+            <p>Track button</p>
+        </section> -->
+
+        <section id="addresses" class="content">
+            <section class="addresses-flex">
+                <section>
+                    <h1>Billing address</h1>
+                    <p>Address goes here</p>
+                    <p>Edit button</p>
+                </section>
+                <section>  
+                    <h1>Shipping address</h1>
+                    <p>Address goes here</p>
+                    <p>Edit button</p>
+                </section>
+            </section>
+        </section>
+
+
+        <section id="account-details" class="content">
+            <h1>Account details</h1>
+        </section>
+    </section>
+
+    <footer class="footer2">
+        <div class="parent">
+            <div class="div1">
+                <h3 class="gridbox">How may we help you?</h3>
+                <p><a href="faqs.html">FAQS</a></p>
+                <br>
+                <p><a href="contact.html">Contact us</a></p> 
+            </div>
+
+            <div class="div2"> 
+                <h3>Learn more</h3>
+                <p>Learn more <a href="about.html">about us</a></p>
+                <br>
+                <p>Learn more about our <a href="artists.html">artists</a></p>
+            </div>
+
+            <div class="div3">
+                <h3>Customer services</h3>
+                <p>Discover our <a href="services.html">services</a></p>
+            </div>
+        <div class="div4">
+            <h3>Shop now</h3>
+            <p>Visit our <a href="store2.html">store</a></p>
+        </div>
+        <div class="div5">
+            <h3>language</h3>
+                <p>English - <a href="">Change</a></p>
+        </div>
+    </div>
+        <br>
+        <br>
+        <p>Copyright &copy; 2024 Artful Atlas. All rights reserved</p>
+        <hr>
+        <a href="index.html"><img class="logo" src="images/logos-images/logo.png" alt="Artful Atlas Logo"></a>
+    </footer>
+    
+</body>
+</html>
