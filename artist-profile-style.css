@@ -1,0 +1,28 @@
+#space-around-flex {
+    display:flex;
+    justify-content:space-around;
+}
+.button {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    background-color:#212a2f;
+    color:whitesmoke;
+    font-weight:600;
+    cursor:pointer;
+    width:300px;
+    padding:1%;
+    margin-top:5px;
+    text-align:center;
+    transition:300ms;
+    border:1px solid rgba(0, 0, 0, 0.4);
+    border-radius:10px;
+}
+.button:hover {
+    background-color:black;
+}
+
+#artist-name {
+    margin-top:50px;
+}
