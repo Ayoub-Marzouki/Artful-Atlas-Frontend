@@ -1,8 +1,2 @@
-2:43 PM, 28th February 2024 :
-We're going to merge our first project with our current project, see how it'll become.
-
-The idea here is, given I'm too lazy to start React, I'll continue with html/css/javascript and whatnot, then convert it to react after I'm done.
-
-
-8:42 PM, 5th March 2024 :
-arabic fonts for middle easten style designs
+<h1>Pure Frontend of Artful Atlas Website.</h1>
+--> it contains all that's related to Frontend, this way you can tamper with it insteadd of tampering with django's templates that use Django syntax.
